@@ -10,9 +10,14 @@
   },
   "dependencies": {
     "expo": "~51.0.28",
+    "expo-font": "~12.0.10",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
-    "react-native": "0.74.5"
+    "react-native": "0.74.5",
+    "react-native-elements": "^3.4.3",
+    "react-native-vector-icons": "^10.2.0",
+    "react-navigation": "^5.0.0",
+    "expo-splash-screen": "~0.27.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

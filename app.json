@@ -22,6 +22,19 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "Sen-Regular": "./assets/fonts/Sen-Regular.ttf",
+          "Sen-Medium": "./assets/fonts/Sen-Medium.ttf",
+          "Sen-SemiBold": "./assets/fonts/Sen-SemiBold.ttf",
+          "Sen-Bold": "./assets/fonts/Sen-Bold.ttf",
+          "Sen-ExtraBold": "./assets/fonts/Sen-ExtraBold.ttf"
+        }
+      ]
+    ]
+
   }
 }
