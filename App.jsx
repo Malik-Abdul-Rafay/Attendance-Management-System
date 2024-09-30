@@ -5,6 +5,9 @@ import HomeScreen from './src/screens/Home';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import Leave from './src/screens/Leave';
+import ApplyLeaveScreen from './src/screens/ApplyLeaveScreen';
+import FilterModal from './src/screens/FilterModal';
+import TeamMembers from './src/screens/teamMembers';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -31,7 +34,10 @@ export default function App() {
     <>
       <StatusBar style="dark" backgroundColor='white' />
       {/* <HomeScreen /> */}
-      <Leave />
+      {/* <Leave /> */}
+      {/* <ApplyLeaveScreen /> */}
+      {/* <FilterModal /> */}
+      <TeamMembers />
     </>
   );
 }
