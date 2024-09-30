@@ -66,13 +66,29 @@ export default function App() {
   // Past Leaves Item
   const renderPastLeaveItem = ({ item }) => (
     <View style={styles.pastLeaveCard}>
-      <Text style={styles.date}>Date: {item.date}</Text>
-      <Text style={styles.applyDays}>Apply Days: {item.applyDays}</Text>
-      <Text style={styles.leaveBalance}>Leave Balance: {item.leaveBalance}</Text>
-      <Text style={styles.approvedBy}>Approved By: {item.approvedBy}</Text>
+    <View style={styles.dateStatusContainer}>
+      <View>
+      <Text style={styles.date1}>Date:</Text>
+      <Text style={styles.date}>{item.date}</Text>
+      </View>
       <Text style={[styles.status, item.status === 'Approved' ? styles.approved : styles.rejected]}>
         {item.status}
       </Text>
+      </View>
+      <View style={styles.text1text2Container}>
+      <View>
+      <Text style={styles.text1}>Apply Days: </Text>
+      <Text style={styles.text2}>{item.applyDays}</Text>
+      </View>
+      <View>
+      <Text style={styles.text1}>Leave Balance: </Text>
+      <Text style={styles.text2}>{item.leaveBalance}</Text>
+      </View>
+      <View>
+      <Text style={styles.text1}>Approved By: </Text>
+      <Text style={styles.text2}>{item.approvedBy}</Text>
+      </View>
+      </View>
     </View>
   );
 
@@ -206,106 +222,86 @@ const styles = StyleSheet.create({
     },
     tabsContainer: {
       flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginVertical: 15,
+      justifyContent: 'center',
+      marginTop: 20,
       borderRadius: 8,
       backgroundColor: '#fff',
       paddingHorizontal: 20,
+      borderBottomColor: '#6c757d',
+      borderBottomWidth: 1,
     },
+    
+    
     activeTab: {
-      backgroundColor: '#007bff',
+      borderBottomWidth:2,
+      paddingBottom: 12,
     },
     inactiveTab: {
-        paddingHorizontal: 20,
-        paddingVertical: 12,
-        borderRadius: 12
+      width:'50%'
     },
     activeTabText: {
-      color: '#fff',
       fontFamily: 'Sen-SemiBold', 
-      fontSize: 15.5
+      fontSize: 18,
+      textAlign:'center'
+      
     },
     inactiveTabText: {
       color: '#6c757d',
       fontFamily: 'Sen-SemiBold', 
-      fontSize: 15.5
+      fontSize: 18,
+      textAlign:'center'
 
     },
-    leaveCard: {
-      backgroundColor: '#fff',
-      padding: 16,
-      borderRadius: 8,
-      marginBottom: 16,
-      borderWidth: 1,
-      borderColor: '#dee2e6',
-    },
-    name: {
-      fontSize: 16,
-      marginBottom: 8,
-      fontFamily: 'Sen-Bold', 
-    },
-    date: {
-      fontSize: 14,
-      color: '#6c757d',
-      marginBottom: 8,
-      fontFamily: 'Sen-Regular', // Using Sen-Regular font
-    },
-    actions: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-    },
-    rejectBtn: {
-      padding: 8,
-      backgroundColor: '#dc3545',
-      borderRadius: 8,
-    },
-    rejectText: {
-      color: '#fff',
-      fontFamily: 'Sen-Medium', 
-    },
-    acceptBtn: {
-      padding: 8,
-      backgroundColor: '#28a745',
-      borderRadius: 8,
-    },
-    acceptText: {
-      color: '#fff',
-      fontFamily: 'Sen-Medium', 
-    },
-    listContainer: {
-      paddingBottom: 100,
-    },
     pastLeaveCard: {
-      backgroundColor: '#f8f9fa',
+      backgroundColor: '#F3F3F3',
       padding: 16,
       borderRadius: 8,
       marginBottom: 16,
+      marginHorizontal:20
     },
-    applyDays: {
+    dateStatusContainer:{
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent:'space-between'
+        },
+    date: {
+      fontSize: 15,
+      color: 'black',
+      fontFamily: 'Sen-Bold', 
+      marginTop:2,
+    },
+    date1: {
       fontSize: 14,
       color: '#6c757d',
-      fontFamily: 'Sen-Regular', // Using Sen-Regular font
+      fontFamily: 'Sen-SemiBold', 
     },
-    leaveBalance: {
+    text1text2Container:{
+      flexDirection: 'row',
+      justifyContent:'space-between'
+    },
+    text1: {
       fontSize: 14,
       color: '#6c757d',
-      fontFamily: 'Sen-Regular', // Using Sen-Regular font
+      fontFamily: 'Sen-Regular', 
     },
-    approvedBy: {
+    text2:{
       fontSize: 14,
       color: '#6c757d',
-      fontFamily: 'Sen-Regular', // Using Sen-Regular font
+      fontFamily: 'Sen-Regular', 
     },
     status: {
       fontSize: 14,
-      marginTop: 8,
-      fontFamily: 'Sen-Medium', 
+      fontFamily: 'Sen-SemiBold',
+      padding:5,
+      borderRadius:90,
     },
     approved: {
       color: '#28a745',
+      backgroundColor: '#f5fcfb'
     },
     rejected: {
       color: '#dc3545',
+      backgroundColor: '#fff6f5'
     },
     approvedText: {
       color: '#28a745',
